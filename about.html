@@ -58,7 +58,7 @@
   /* Two-column intro: text left, photo right */
   .intro-grid {
     display: grid;
-    grid-template-columns: 1fr 420px;
+    grid-template-columns: 1fr 380px;
     gap: 1rem;
     align-items: start;
     margin-bottom: 3rem;
@@ -80,6 +80,9 @@
     margin-bottom: 1rem;
   }
   .photo-wrap img {
+    min-height: 500px;
+    object-fit: contain;
+    object-position: top;
     width: 100%;
     height: auto;
     display: block;
