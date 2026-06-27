@@ -50,39 +50,18 @@
   .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; color: var(--purple-dark); }
 
   .content {
-    max-width: 900px;
+    max-width: 860px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    overflow: hidden;
   }
 
-  /* Two-column intro: text left, photo right */
-  .intro-grid {
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 1rem;
-    align-items: start;
-    margin-bottom: 3rem;
-  }
-  .intro-text h2 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--purple);
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .intro-text p {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 1rem;
+  .photo-wrap {
+    float: right;
+    margin: 0 0 1rem 2rem;
+    width: 320px;
   }
   .photo-wrap img {
-    min-height: 500px;
-    object-fit: contain;
-    object-position: top;
     width: 100%;
     height: auto;
     display: block;
@@ -100,6 +79,7 @@
     border-bottom: 1px solid var(--border);
   }
   .content h2:first-child { margin-top: 0; }
+
   .content p {
     font-size: 1rem;
     color: var(--text-secondary);
@@ -124,6 +104,7 @@
     background: var(--purple-dark);
     padding: 4rem 2rem;
     text-align: center;
+    clear: both;
   }
   .bottom-cta h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; color: white; margin-bottom: 0.75rem; }
   .bottom-cta p { color: rgba(255,255,255,0.75); font-size: 1rem; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
@@ -135,14 +116,11 @@
   footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
   footer a:hover { color: white; }
 
-  @media (max-width: 700px) {
+  @media (max-width: 640px) {
     nav { padding: 0 1rem; }
     .nav-links { gap: 1rem; }
     .content { padding: 2.5rem 1.25rem; }
-    .intro-grid {
-      grid-template-columns: 1fr;
-    }
-    .photo-wrap { width: 220px; margin: 0 auto; }
+    .photo-wrap { float: none; width: 220px; margin: 0 auto 2rem; display: block; }
   }
 </style>
 </head>
@@ -167,17 +145,14 @@
 
 <div class="content">
 
-  <div class="intro-grid">
-    <div class="intro-text">
-      <h2>Who I work with</h2>
-      <p>I work with people who are ready to move forward. Whether you're going through a big life change, feeling overwhelmed, or wanting to show up differently in your own life. My approach is warm, grounded, and led by you. I will give you space to think clearly, feel more in control, and move at a pace that works for you.</p>
-      <p>Most people who come to me aren't in crisis. They're capable, often successful, and quietly wondering why it doesn't feel like enough. Something has shifted, or stopped fitting, and they can't quite name it yet.</p>
-      <div class="highlight-line">That's exactly where I work best.</div>
-    </div>
-    <div class="photo-wrap">
-      <img src="Katie.png" alt="Katie Porter, Life Coach">
-    </div>
+  <div class="photo-wrap">
+    <img src="Katie.png" alt="Katie Porter, Life Coach">
   </div>
+
+  <h2>Who I work with</h2>
+  <p>I work with people who are ready to move forward. Whether you're going through a big life change, feeling overwhelmed, or wanting to show up differently in your own life. My approach is warm, grounded, and led by you. I will give you space to think clearly, feel more in control, and move at a pace that works for you.</p>
+  <p>Most people who come to me aren't in crisis. They're capable, often successful, and quietly wondering why it doesn't feel like enough. Something has shifted, or stopped fitting, and they can't quite name it yet.</p>
+  <div class="highlight-line">That's exactly where I work best.</div>
 
   <h2>My approach</h2>
   <p>I've navigated anxiety, identity, and reinvention myself. I'm not coaching from a textbook — I'm coaching from experience. Using the GROW model as my foundation, every session is built around you, your agenda, your pace, and what's actually going on beneath the surface.</p>
