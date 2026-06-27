@@ -60,6 +60,18 @@
     padding: 4rem 2rem;
   }
 
+  .photo-wrap {
+    float: right;
+    margin: 0 0 2rem 2.5rem;
+    width: 240px;
+    flex-shrink: 0;
+  }
+  .photo-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   .content h2 {
     font-size: 1.1rem;
     font-weight: 700;
@@ -98,6 +110,7 @@
     background: var(--purple-dark);
     padding: 4rem 2rem;
     text-align: center;
+    clear: both;
   }
   .bottom-cta h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; color: white; margin-bottom: 0.75rem; }
   .bottom-cta p { color: rgba(255,255,255,0.75); font-size: 1rem; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
@@ -113,6 +126,12 @@
     nav { padding: 0 1rem; }
     .nav-links { gap: 1rem; }
     .content { padding: 2.5rem 1.25rem; }
+    .photo-wrap {
+      float: none;
+      margin: 0 auto 2rem;
+      width: 200px;
+      display: block;
+    }
   }
 </style>
 </head>
@@ -136,6 +155,11 @@
 </div>
 
 <div class="content">
+
+  <div class="photo-wrap">
+    <img src="Katie.png" alt="Katie Porter, Life Coach">
+  </div>
+
   <h2>Who I work with</h2>
   <p>I work with people who are ready to move forward. Whether you're going through a big life change, feeling overwhelmed, or wanting to show up differently in your own life. My approach is warm, grounded, and led by you. I will give you space to think clearly, feel more in control, and move at a pace that works for you.</p>
   <p>Most people who come to me aren't in crisis. They're capable, often successful, and quietly wondering why it doesn't feel like enough. Something has shifted, or stopped fitting, and they can't quite name it yet.</p>
@@ -150,6 +174,7 @@
   <h2>Professional background</h2>
   <p>With over two decades of professional experience, my career has spanned television production at ITV, Channel 4, Channel 5 and Sky, executive assistance at the most senior levels of broadcasting, and a current marketing leadership role at a growing IT consultancy. I have managed complex, high-pressure projects, supported senior executives, and built strong working relationships across demanding environments.</p>
   <p>I authored <em>Going Doolally: An Honest Tale of Anxiety and Motherhood</em>, contributed to an online parenting publication, and founded a magazine for women over 40, giving me insight into the challenges of identity, ambition, family, and wellbeing.</p>
+
 </div>
 
 <div class="bottom-cta">
