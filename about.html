@@ -117,10 +117,12 @@
   footer a:hover { color: white; }
 
   @media (max-width: 640px) {
-    nav { padding: 0 1rem; }
-    .nav-links { gap: 1rem; }
-    .content { padding: 2.5rem 1.25rem; }
-    .photo-wrap { float: none; width: 220px; margin: 0 auto 2rem; display: block; }
+    nav { padding: 0.5rem 0.75rem; height: auto; flex-wrap: wrap; gap: 0.5rem; }
+    .nav-links { gap: 0.6rem; flex-wrap: wrap; }
+    .nav-links a { font-size: 12px; }
+    .nav-cta { padding: 6px 10px; font-size: 11px !important; }
+    .content { padding: 2rem 1.25rem; }
+    .photo-wrap { float: none; width: 180px; margin: 0 auto 2rem; display: block; }
   }
 </style>
 </head>
