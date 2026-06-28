@@ -43,7 +43,7 @@
   .nav-cta { background: var(--purple); color: white !important; padding: 8px 18px; border-radius: 8px; font-size: 13px !important; transition: background 0.15s !important; }
   .nav-cta:hover { background: var(--purple-dark) !important; color: white !important; }
 
-  .hero { background: #7030a0; padding: 5rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
+  .hero { background: linear-gradient(135deg, var(--purple-pale) 0%, var(--purple-light) 100%); padding: 5rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
   .hero::before { content: ""; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; border-radius: 50%; background: rgba(112,48,160,0.06); pointer-events: none; }
   .hero::after { content: ""; position: absolute; bottom: -80px; left: -40px; width: 240px; height: 240px; border-radius: 50%; background: rgba(112,48,160,0.05); pointer-events: none; }
   .hero-sub { font-size: 1.1rem; color: var(--text-secondary); max-width: 520px; margin: 0 auto 2.25rem; line-height: 1.7; }
@@ -155,19 +155,19 @@
   <div class="butterfly" style="top:15%; left:-8%; width:90px; height:90px; animation:fly-ltr 28s linear 0s infinite; --drift:-50px;">
     <svg viewBox="0 0 60 50" xmlns="http://www.w3.org/2000/svg">
       <!-- Left upper wing - rotates up/down around body -->
-      <path d="M30,22 C26,14 14,4 5,7 C-2,10 0,21 7,24 C14,27 23,25 30,22 Z" fill="#9b59b6" opacity="0.78">
+      <path d="M30,22 C26,14 14,4 5,7 C-2,10 0,21 7,24 C14,27 23,25 30,22 Z" fill="#5a1f8a" opacity="0.78">
         <animateTransform attributeName="transform" type="rotate" values="0 30 22; 25 30 22; 0 30 22" keyTimes="0;0.5;1" dur="0.55s" repeatCount="indefinite"/>
       </path>
       <!-- Left lower wing -->
-      <path d="M30,26 C24,24 12,22 6,28 C2,33 7,41 15,38 C22,36 27,31 30,26 Z" fill="#7030a0" opacity="0.65">
+      <path d="M30,26 C24,24 12,22 6,28 C2,33 7,41 15,38 C22,36 27,31 30,26 Z" fill="#5a1f8a" opacity="0.65">
         <animateTransform attributeName="transform" type="rotate" values="0 30 26; 20 30 26; 0 30 26" keyTimes="0;0.5;1" dur="0.55s" repeatCount="indefinite"/>
       </path>
       <!-- Right upper wing - mirror of left -->
-      <path d="M30,22 C34,14 46,4 55,7 C62,10 60,21 53,24 C46,27 37,25 30,22 Z" fill="#9b59b6" opacity="0.78">
+      <path d="M30,22 C34,14 46,4 55,7 C62,10 60,21 53,24 C46,27 37,25 30,22 Z" fill="#5a1f8a" opacity="0.78">
         <animateTransform attributeName="transform" type="rotate" values="0 30 22; -25 30 22; 0 30 22" keyTimes="0;0.5;1" dur="0.55s" repeatCount="indefinite"/>
       </path>
       <!-- Right lower wing -->
-      <path d="M30,26 C36,24 48,22 54,28 C58,33 53,41 45,38 C38,36 33,31 30,26 Z" fill="#7030a0" opacity="0.65">
+      <path d="M30,26 C36,24 48,22 54,28 C58,33 53,41 45,38 C38,36 33,31 30,26 Z" fill="#5a1f8a" opacity="0.65">
         <animateTransform attributeName="transform" type="rotate" values="0 30 26; -20 30 26; 0 30 26" keyTimes="0;0.5;1" dur="0.55s" repeatCount="indefinite"/>
       </path>
       <!-- Body -->
@@ -183,19 +183,19 @@
   <div class="butterfly" style="top:58%; left:105%; width:80px; height:80px; animation:fly-rtl 22s linear 6s infinite; --drift:40px;">
     <svg viewBox="0 0 60 50" xmlns="http://www.w3.org/2000/svg">
       <!-- Left upper wing - rotates up/down around body -->
-      <path d="M30,22 C26,14 14,4 5,7 C-2,10 0,21 7,24 C14,27 23,25 30,22 Z" fill="#c39bd3" opacity="0.78">
+      <path d="M30,22 C26,14 14,4 5,7 C-2,10 0,21 7,24 C14,27 23,25 30,22 Z" fill="#9b59b6" opacity="0.78">
         <animateTransform attributeName="transform" type="rotate" values="0 30 22; 25 30 22; 0 30 22" keyTimes="0;0.5;1" dur="0.32s" repeatCount="indefinite"/>
       </path>
       <!-- Left lower wing -->
-      <path d="M30,26 C24,24 12,22 6,28 C2,33 7,41 15,38 C22,36 27,31 30,26 Z" fill="#9b59b6" opacity="0.65">
+      <path d="M30,26 C24,24 12,22 6,28 C2,33 7,41 15,38 C22,36 27,31 30,26 Z" fill="#5a1f8a" opacity="0.65">
         <animateTransform attributeName="transform" type="rotate" values="0 30 26; 20 30 26; 0 30 26" keyTimes="0;0.5;1" dur="0.32s" repeatCount="indefinite"/>
       </path>
       <!-- Right upper wing - mirror of left -->
-      <path d="M30,22 C34,14 46,4 55,7 C62,10 60,21 53,24 C46,27 37,25 30,22 Z" fill="#c39bd3" opacity="0.78">
+      <path d="M30,22 C34,14 46,4 55,7 C62,10 60,21 53,24 C46,27 37,25 30,22 Z" fill="#9b59b6" opacity="0.78">
         <animateTransform attributeName="transform" type="rotate" values="0 30 22; -25 30 22; 0 30 22" keyTimes="0;0.5;1" dur="0.32s" repeatCount="indefinite"/>
       </path>
       <!-- Right lower wing -->
-      <path d="M30,26 C36,24 48,22 54,28 C58,33 53,41 45,38 C38,36 33,31 30,26 Z" fill="#9b59b6" opacity="0.65">
+      <path d="M30,26 C36,24 48,22 54,28 C58,33 53,41 45,38 C38,36 33,31 30,26 Z" fill="#5a1f8a" opacity="0.65">
         <animateTransform attributeName="transform" type="rotate" values="0 30 26; -20 30 26; 0 30 26" keyTimes="0;0.5;1" dur="0.32s" repeatCount="indefinite"/>
       </path>
       <!-- Body -->
@@ -211,7 +211,7 @@
   <div class="butterfly" style="top:35%; left:-8%; width:34px; height:34px; animation:fly-ltr 20s linear 2s infinite; --drift:30px;">
     <svg viewBox="0 0 60 50" xmlns="http://www.w3.org/2000/svg">
       <!-- Left upper wing - rotates up/down around body -->
-      <path d="M30,22 C26,14 14,4 5,7 C-2,10 0,21 7,24 C14,27 23,25 30,22 Z" fill="#7030a0" opacity="0.78">
+      <path d="M30,22 C26,14 14,4 5,7 C-2,10 0,21 7,24 C14,27 23,25 30,22 Z" fill="#5a1f8a" opacity="0.78">
         <animateTransform attributeName="transform" type="rotate" values="0 30 22; 25 30 22; 0 30 22" keyTimes="0;0.5;1" dur="0.42s" repeatCount="indefinite"/>
       </path>
       <!-- Left lower wing -->
@@ -219,7 +219,7 @@
         <animateTransform attributeName="transform" type="rotate" values="0 30 26; 20 30 26; 0 30 26" keyTimes="0;0.5;1" dur="0.42s" repeatCount="indefinite"/>
       </path>
       <!-- Right upper wing - mirror of left -->
-      <path d="M30,22 C34,14 46,4 55,7 C62,10 60,21 53,24 C46,27 37,25 30,22 Z" fill="#7030a0" opacity="0.78">
+      <path d="M30,22 C34,14 46,4 55,7 C62,10 60,21 53,24 C46,27 37,25 30,22 Z" fill="#5a1f8a" opacity="0.78">
         <animateTransform attributeName="transform" type="rotate" values="0 30 22; -25 30 22; 0 30 22" keyTimes="0;0.5;1" dur="0.42s" repeatCount="indefinite"/>
       </path>
       <!-- Right lower wing -->
@@ -239,19 +239,19 @@
   <div class="butterfly" style="top:72%; left:105%; width:28px; height:28px; animation:fly-rtl 16s linear 10s infinite; --drift:-35px;">
     <svg viewBox="0 0 60 50" xmlns="http://www.w3.org/2000/svg">
       <!-- Left upper wing - rotates up/down around body -->
-      <path d="M30,22 C26,14 14,4 5,7 C-2,10 0,21 7,24 C14,27 23,25 30,22 Z" fill="#9b59b6" opacity="0.78">
+      <path d="M30,22 C26,14 14,4 5,7 C-2,10 0,21 7,24 C14,27 23,25 30,22 Z" fill="#5a1f8a" opacity="0.78">
         <animateTransform attributeName="transform" type="rotate" values="0 30 22; 25 30 22; 0 30 22" keyTimes="0;0.5;1" dur="0.24s" repeatCount="indefinite"/>
       </path>
       <!-- Left lower wing -->
-      <path d="M30,26 C24,24 12,22 6,28 C2,33 7,41 15,38 C22,36 27,31 30,26 Z" fill="#7030a0" opacity="0.65">
+      <path d="M30,26 C24,24 12,22 6,28 C2,33 7,41 15,38 C22,36 27,31 30,26 Z" fill="#5a1f8a" opacity="0.65">
         <animateTransform attributeName="transform" type="rotate" values="0 30 26; 20 30 26; 0 30 26" keyTimes="0;0.5;1" dur="0.24s" repeatCount="indefinite"/>
       </path>
       <!-- Right upper wing - mirror of left -->
-      <path d="M30,22 C34,14 46,4 55,7 C62,10 60,21 53,24 C46,27 37,25 30,22 Z" fill="#9b59b6" opacity="0.78">
+      <path d="M30,22 C34,14 46,4 55,7 C62,10 60,21 53,24 C46,27 37,25 30,22 Z" fill="#5a1f8a" opacity="0.78">
         <animateTransform attributeName="transform" type="rotate" values="0 30 22; -25 30 22; 0 30 22" keyTimes="0;0.5;1" dur="0.24s" repeatCount="indefinite"/>
       </path>
       <!-- Right lower wing -->
-      <path d="M30,26 C36,24 48,22 54,28 C58,33 53,41 45,38 C38,36 33,31 30,26 Z" fill="#7030a0" opacity="0.65">
+      <path d="M30,26 C36,24 48,22 54,28 C58,33 53,41 45,38 C38,36 33,31 30,26 Z" fill="#5a1f8a" opacity="0.65">
         <animateTransform attributeName="transform" type="rotate" values="0 30 26; -20 30 26; 0 30 26" keyTimes="0;0.5;1" dur="0.24s" repeatCount="indefinite"/>
       </path>
       <!-- Body -->
@@ -267,19 +267,19 @@
   <div class="butterfly" style="top:44%; left:-8%; width:44px; height:44px; animation:fly-ltr 32s linear 14s infinite; --drift:20px;">
     <svg viewBox="0 0 60 50" xmlns="http://www.w3.org/2000/svg">
       <!-- Left upper wing - rotates up/down around body -->
-      <path d="M30,22 C26,14 14,4 5,7 C-2,10 0,21 7,24 C14,27 23,25 30,22 Z" fill="#c39bd3" opacity="0.78">
+      <path d="M30,22 C26,14 14,4 5,7 C-2,10 0,21 7,24 C14,27 23,25 30,22 Z" fill="#9b59b6" opacity="0.78">
         <animateTransform attributeName="transform" type="rotate" values="0 30 22; 25 30 22; 0 30 22" keyTimes="0;0.5;1" dur="0.48s" repeatCount="indefinite"/>
       </path>
       <!-- Left lower wing -->
-      <path d="M30,26 C24,24 12,22 6,28 C2,33 7,41 15,38 C22,36 27,31 30,26 Z" fill="#7030a0" opacity="0.65">
+      <path d="M30,26 C24,24 12,22 6,28 C2,33 7,41 15,38 C22,36 27,31 30,26 Z" fill="#5a1f8a" opacity="0.65">
         <animateTransform attributeName="transform" type="rotate" values="0 30 26; 20 30 26; 0 30 26" keyTimes="0;0.5;1" dur="0.48s" repeatCount="indefinite"/>
       </path>
       <!-- Right upper wing - mirror of left -->
-      <path d="M30,22 C34,14 46,4 55,7 C62,10 60,21 53,24 C46,27 37,25 30,22 Z" fill="#c39bd3" opacity="0.78">
+      <path d="M30,22 C34,14 46,4 55,7 C62,10 60,21 53,24 C46,27 37,25 30,22 Z" fill="#9b59b6" opacity="0.78">
         <animateTransform attributeName="transform" type="rotate" values="0 30 22; -25 30 22; 0 30 22" keyTimes="0;0.5;1" dur="0.48s" repeatCount="indefinite"/>
       </path>
       <!-- Right lower wing -->
-      <path d="M30,26 C36,24 48,22 54,28 C58,33 53,41 45,38 C38,36 33,31 30,26 Z" fill="#7030a0" opacity="0.65">
+      <path d="M30,26 C36,24 48,22 54,28 C58,33 53,41 45,38 C38,36 33,31 30,26 Z" fill="#5a1f8a" opacity="0.65">
         <animateTransform attributeName="transform" type="rotate" values="0 30 26; -20 30 26; 0 30 26" keyTimes="0;0.5;1" dur="0.48s" repeatCount="indefinite"/>
       </path>
       <!-- Body -->
