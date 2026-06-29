@@ -53,16 +53,158 @@
   .content h2:first-child { margin-top: 0; }
   .content p { font-size: 1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; }
 
-  .steps { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1rem; }
-  .step { display: flex; gap: 1rem; align-items: flex-start; background: var(--surface); border: 0.5px solid var(--border-strong); border-radius: var(--radius); padding: 1rem 1.25rem; }
-  .step-num { background: var(--purple-light); color: var(--purple); font-weight: 700; font-size: 13px; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
-  .step-body h3 { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.2rem; }
+  .steps { display: flex; flex-direction: column; gap: 0; margin-bottom: 1rem; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(112,48,160,0.18); }
+  .step { display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 1.25rem; border-bottom: 1px solid rgba(112,48,160,0.1); transition: background 0.15s; }
+  .step:last-child { border-bottom: none; }
+  .step:nth-child(odd)  { background: #ffffff; }
+  .step:nth-child(even) { background: #f0e6f8; }
+  .step:hover { background: #e6d4f5; }
+  .step-num { background: var(--purple); color: white; font-weight: 700; font-size: 13px; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .step:nth-child(even) .step-num { background: var(--purple-dark); }
+  .step-body h3 { font-size: 0.95rem; font-weight: 700; color: var(--purple-dark); margin-bottom: 0.2rem; }
   .step-body p { font-size: 0.9rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
 
   .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 0.5rem; }
   .detail-card { background: var(--purple-pale); border-radius: var(--radius); padding: 1.1rem 1.25rem; border: 0.5px solid var(--border); }
   .detail-card h3 { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple-mid); margin-bottom: 0.4rem; }
   .detail-card p { font-size: 0.9rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+
+  /* PACKAGES */
+  .packages-section {
+    background: var(--purple-pale);
+    padding: 4rem 2rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .packages-section .section-title {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-bottom: 0.6rem;
+  }
+  .packages-section .section-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    max-width: 520px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+  .packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .package-card {
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    position: relative;
+  }
+  .package-featured {
+    border-color: var(--purple);
+    border-width: 2px;
+    box-shadow: 0 4px 24px rgba(112,48,160,0.1);
+  }
+  .package-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--purple);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .package-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .package-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .package-detail {
+    font-size: 0.875rem;
+    color: var(--purple);
+    font-weight: 600;
+    margin: 0;
+  }
+  .package-desc {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin: 0;
+  }
+  .package-includes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    flex: 1;
+  }
+  .package-includes li {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    padding-left: 1.25rem;
+    position: relative;
+    line-height: 1.5;
+  }
+  .package-includes li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--purple);
+    font-weight: 700;
+  }
+  .package-investment {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+  .btn-primary {
+    background: var(--purple);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: background 0.15s, transform 0.1s;
+    margin-top: 0.25rem;
+  }
+  .btn-primary:hover { background: var(--purple-dark); transform: translateY(-1px); }
+  .packages-note {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
 
   .bottom-cta { background: var(--purple-dark); padding: 4rem 2rem; text-align: center; }
   .bottom-cta h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; color: white; margin-bottom: 0.75rem; }
@@ -82,6 +224,8 @@
     .nav-cta { padding: 6px 10px; font-size: 11px !important; }
     .content { padding: 2.5rem 1.25rem; }
     .details-grid { grid-template-columns: 1fr; }
+    .packages-section { padding: 3rem 1.25rem; }
+    .packages-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -114,10 +258,10 @@
   <div class="steps">
     <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Check in</h3><p>We start by making sure you're settled and ready. A moment to arrive before we begin.</p></div></div>
     <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Set your goal for the session</h3><p>You tell me what you'd like to focus on today. We agree on what a good outcome looks like.</p></div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Explore where you are now</h3><p>We look honestly at your current situation — what's happening, how it feels, what you've already tried.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Explore where you are now</h3><p>We look honestly at your current situation: what's happening, how it feels, what you've already tried.</p></div></div>
     <div class="step"><div class="step-num">4</div><div class="step-body"><h3>Open up your options</h3><p>Together we explore possibilities you may not have considered. What could you do? What would help?</p></div></div>
-    <div class="step"><div class="step-num">5</div><div class="step-body"><h3>Decide on your next step</h3><p>You leave with something concrete — a commitment to yourself, however small, that moves you forward.</p></div></div>
-    <div class="step"><div class="step-num">6</div><div class="step-body"><h3>Close and reflect</h3><p>We end with a key takeaway from the session — something you'll carry with you.</p></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-body"><h3>Decide on your next step</h3><p>You leave with something concrete, a commitment to yourself, however small, that moves you forward.</p></div></div>
+    <div class="step"><div class="step-num">6</div><div class="step-body"><h3>Close and reflect</h3><p>We end with a key takeaway from the session, something you'll carry with you.</p></div></div>
   </div>
 
   <h2>Practical details</h2>
@@ -128,6 +272,64 @@
     <div class="detail-card"><h3>Cancellations</h3><p>Please give as much notice as possible if you need to rearrange.</p></div>
   </div>
 </div>
+
+<section class="packages-section">
+  <p class="section-title">How we work together</p>
+  <p class="section-intro">Every coaching journey starts with a free chemistry call, so we can make sure we're a good fit before you commit to anything.</p>
+
+  <div class="packages-grid">
+
+    <div class="package-card">
+      <div class="package-label">Taster</div>
+      <h3 class="package-name">Three Sessions</h3>
+      <p class="package-detail">3 x 1 hour &nbsp;|&nbsp; Over 6 weeks</p>
+      <p class="package-desc">Not sure where to start? This is a gentle way in. Three focused sessions to get you clear on what you want and what's been holding you back.</p>
+      <ul class="package-includes">
+        <li>Free chemistry call</li>
+        <li>3 x 1-hour coaching sessions via Zoom</li>
+        <li>Email and WhatsApp support between sessions</li>
+        <li>Wheel of Life assessment</li>
+      </ul>
+      <p class="package-investment">Investment discussed on your free chemistry call.</p>
+      <a href="contact.html" class="btn-primary">Book your free call</a>
+    </div>
+
+    <div class="package-card package-featured">
+      <div class="package-badge">Most popular</div>
+      <div class="package-label">Core Programme</div>
+      <h3 class="package-name">Six Sessions</h3>
+      <p class="package-detail">6 x 1 hour &nbsp;|&nbsp; Over 3 months</p>
+      <p class="package-desc">Real change takes time. Six sessions give us the depth and momentum to move you from where you are to where you actually want to be.</p>
+      <ul class="package-includes">
+        <li>Free chemistry call</li>
+        <li>6 x 1-hour coaching sessions via Zoom</li>
+        <li>Email and WhatsApp support between sessions</li>
+        <li>Wheel of Life assessment</li>
+        <li>Session recordings on request</li>
+      </ul>
+      <p class="package-investment">Investment discussed on your free chemistry call.</p>
+      <a href="contact.html" class="btn-primary">Book your free call</a>
+    </div>
+
+    <div class="package-card">
+      <div class="package-label">Flexible</div>
+      <h3 class="package-name">As and When</h3>
+      <p class="package-detail">Sessions used at your pace</p>
+      <p class="package-desc">Life doesn't run to a schedule. Buy a block of sessions and use them when you need them, with no fixed diary commitment.</p>
+      <ul class="package-includes">
+        <li>Free chemistry call</li>
+        <li>Block of sessions to use flexibly</li>
+        <li>Email and WhatsApp support</li>
+        <li>Wheel of Life assessment</li>
+      </ul>
+      <p class="package-investment">Investment discussed on your free chemistry call.</p>
+      <a href="contact.html" class="btn-primary">Book your free call</a>
+    </div>
+
+  </div>
+
+  <p class="packages-note">Not sure which is right for you? That's exactly what the chemistry call is for.</p>
+</section>
 
 <div class="bottom-cta">
   <h2>Ready to take the first step?</h2>
